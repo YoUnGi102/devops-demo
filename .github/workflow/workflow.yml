@@ -11,7 +11,7 @@ jobs:
   # Build job
   build:
     name: My First Pipeline
-    # Run on Ubuntu using the latest version
+    # Run on Ubuntu using the latest versiondsd
     runs-on: ubuntu-latest
     # Job's steps
     steps:
