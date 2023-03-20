@@ -1,14 +1,14 @@
 name: CI Pipeline (DOC1)
 
 on:
-#Manually trigger workflow run
-sworkflow_dispatch:
-#Trigger the workflow on push from the master/main branch
-push:
-  branches: [ master ]
+  #Manually trigger workflow runs
+  workflow_dispatch:
+  #Trigger the workflow on push from the master/main branch
+  push:
+    branches: [ master ]
 
 jobs:
-# Build jobbuild:
+  # Build jobbuild:
   name: My First Pipeline
   # Run on Ubuntu using the latest version
   runs-on: ubuntu-latest
