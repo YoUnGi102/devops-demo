@@ -1,11 +1,14 @@
 name: CI Pipeline (DOC1)
+
 on:
-#Manually trigger workflow runs
-workflow_dispatch:
-#Trigger the workflow on push from the master/main branchpush:branches: [ master]
+#Manually trigger workflow run
+sworkflow_dispatch:
+#Trigger the workflow on push from the master/main branch
+push:
+  branches: [ master ]
+
 jobs:
-# Build job
-  build:
+# Build jobbuild:
   name: My First Pipeline
   # Run on Ubuntu using the latest version
   runs-on: ubuntu-latest
@@ -13,5 +16,7 @@ jobs:
   steps:
     # Check-out your repository
     - uses: actions/checkout@v3
+    - name: To Show Error
+      run: echo "Should fail at this point ..." ; exit 1
     - name: Run a one-line script
       run: echo "Continuous Integration"
